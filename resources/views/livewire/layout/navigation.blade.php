@@ -25,7 +25,17 @@ $logout = function (Logout $logout) {
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
-                        Inicio
+                        <button
+                        class="text-black bg-gradient-to-r
+                        form-blue-500 via-blue-600 to-blue-700
+                        hover:bg-gardient-to-br focus:ring-4
+                        focus:ouline-none focus:ring-blue-300
+                        dark:focus:ring-blue-800/80 shadow-lg
+                        shadow-blue-500/50 dark:shadow-lg
+                        text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                        type="button">
+                        inicio
+                        </button>
                     </x-nav-link>
                     <x-nav-link :href="route('aulas')" :active="request()->routeIs('aulas')" wire:navigate>
                        Aulas

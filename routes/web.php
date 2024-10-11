@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Aulacontroller;
+
 
 Route::view('/', 'welcome');
+Route::get('/aulas', [Aulacontroller::class,'index']);
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
@@ -25,3 +28,5 @@ Route::view('horarios', 'horarios')
     ->name('horarios');
 
 require __DIR__.'/auth.php';
+
+
